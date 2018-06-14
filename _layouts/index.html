@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/base.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/all.css">
+</head>
+<body>
+<div class="bg-cover"></div>
+
+<div class="header animated from-bottom" id="masthead">
+    <div class="navbar">
+        <ul class="menu">
+            <li class="active">
+                <a href="#">首页</a>
+            </li>
+           <!--  <li>
+                <a href="{:url('blog/index')}">技术</a>
+            </li>
+            <li>
+                <a href="">生活</a>
+            </li>
+            <li>
+                <a href="">收藏</a>
+            </li> -->
+        </ul>
+    </div>
+
+
+    <div class="header-icon ">
+        <figure>
+            <img class="custom-logo avatar" src="{{ site.url }}/assets/image/omikron.png">
+        </figure>
+        <h3 class="blog-description"><p>This is beauty</p></h3>
+    </div>
+    <div class="animation-header">
+        <div class="animation-wrapper">
+            <svg id="header-decor" class="decor bottom" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
+                <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
+                <path class="medium left" d="M0 100 L50 50 L0 33.3" fill="rgba(255,255,255, .3)"></path>
+                <path class="medium right" d="M100 100 L50 50 L100 33.3" fill="rgba(255,255,255, .3)"></path>
+                <path class="small left" d="M0 100 L50 50 L0 66.6" fill="rgba(255,255,255, .5)"></path>
+                <path class="small right" d="M100 100 L50 50 L100 66.6" fill="rgba(255,255,255, .5)"></path>
+                <path d="M0 99.9 L50 49.9 L100 99.9 L0 99.9" fill="rgba(255,255,255, 1)"></path>
+                <path d="M48 52 L50 49 L52 52 L48 52" fill="rgba(255,255,255, 1)"></path>
+            </svg>
+        </div>
+    </div>
+</div>
+<div class="main" id="main">
+    <div class="container">
+        <h1> 因为优秀， 所以优秀！</h1>
+
+        <ul class="content">
+		{% for best in site.data.bests %}
+			<li>
+                <div class="item">
+                    <a href="{{ best.link }}" target="_blank">
+                        <img src="{{ site.url }}/assets/image/{{ best.cover }}" alt="">
+                        <h2>{{ best.title }}</h2>
+                        <p class="desc">{{ best.desc }}</p>
+                    </a>
+                </div>
+            </li>
+
+		{% endfor %}
+
+        </ul>
+        <div class="clear"></div>
+
+    </div>
+</div>
+<div class="footer animated from-top clear">
+
+    <div class="animation-wrapper">
+        <svg id="footer-decor" class="decor top" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
+            <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
+            <path class="medium left" d="M0 0 L50 50 L0 66.6" fill="rgba(255,255,255, .3)"></path>
+            <path class="medium right" d="M100 0 L50 50 L100 66.6" fill="rgba(255,255,255, .3)"></path>
+            <path class="small left" d="M0 0 L50 50 L0 33.3" fill="rgba(255,255,255, .5)"></path>
+            <path class="small right" d="M100 0 L50 50 L100 33.3" fill="rgba(255,255,255, .5)"></path>
+            <path d="M0 0 L50 50 L100 0 L0 0" fill="rgba(255,255,255, 1)"></path>
+            <path d="M48 48 L50 51 L52 48 L48 48" fill="rgba(255,255,255, 1)"></path>
+        </svg>
+    </div>
+    <ul class="link-list hide">
+        <li>
+            <a title="weibo" class="socialicon" href="#"><i class="iconfont" aria-hidden="true"></i></a>
+        </li>
+        <li class="wechat">
+            <a class="socialicon"><i class="iconfont"></i></a>
+            <!--<div class="wechatimg"><img src="./49D3746D-7519-B709-83E4-65BD1927C4E7.jpg"></div>-->
+        </li>
+        <li>
+            <a title="QQ" class="socialicon" href="#" target="_blank"><i class="iconfont" aria-hidden="true"></i></a>
+        </li>
+    </ul>
+    <div class="white ">Copyright© 2018. Design by Lylan</div>
+</div>
+
+<script type="text/javascript" src="{{ site.url }}/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/plugins.js"></script>
+<script>
+    waypointsInit();
+    function waypointsInit() {
+
+        $('#masthead').waypoint(function(direction) {
+            $(this).addClass('animation-on');
+        });
+
+        $('#main').waypoint(function(direction) {
+            $('#masthead').toggleClass('animation-on');
+        });
+
+        $('.footer').waypoint(function(direction) {
+            $(this).toggleClass('animation-on');
+        } , { offset: 'bottom-in-view' });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+- title: BootCDN
+  cover: opencdn.png
+  link: http://www.bootcdn.cn/
+  desc: 稳定、快速、免费的前端开源项目 CDN 加速服务
+
+- title: jQuery API 
+  cover: jqueryapi.png
+  link: https://www.jquery123.com/
+  desc: 根据最新的 jQuery 1.11.x 和 2.1.x 版本翻译的 jQuery API 中文文档/手册。
+
+- title: Vue.js 
+  cover: vue.png
+  link: https://vuejs.bootcss.com/
+  desc: 一套用于构建用户界面的渐进式框架。
+
+- title: Node.js 
+  cover: node.png
+  link: https://www.nodeapp.cn/
+  desc: Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。 
+
+- title: jQuery UI Bootstrap 
+  cover: jqueryui.png
+  link: http://www.bootcss.com/p/jquery-ui-bootstrap/
+  desc: 这套工具让你在使用 jQuery UI 控件时也能充分利用 Bootstrap 的样式，而且不会出现样式不统一的现象，Bootstrap 和 jQuery UI 可以完美融合在一起了！ 
+
+- title: Jekyll 
+  cover: jekyll.png
+  link: https://www.jekyll.com.cn/docs/quickstart/
+  desc: 将纯文本转化为静态网站和博客 

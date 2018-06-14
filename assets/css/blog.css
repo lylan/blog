@@ -1,0 +1,49 @@
+
+.header {height: 200px;width: 100%; background-image: url("../image/bj_cover.jpg"); background-position: top center;}
+.navbar {position: fixed;right: 0px; float: right;top: 40px;padding-right: 90px;text-align: center;background-color: rgba(51,51,51, 0.5);z-index: 288;}
+.navbar li { display: inline-block; height: 50px; width: 80px;line-height: 50px;font-size: 16px;font-weight: bold;}
+.navbar li a { color: #bebbaa;}
+.navbar li.active a { color: #fff;}
+.navbar li:hover a::before { content: '[ ';}
+.navbar li:hover a::after { content: ' ]';}
+
+.header .search-form { text-align: center; width: 100%;padding-top: 60px; }
+.header .search-container {width: 350px; height: 50px;border-radius: 30px;padding: 0 20px;background-color: rgba(255,255,255, 0.5);margin: 0 auto;}
+.header .search-container img { width: 30px;height: 30px;float: left;margin-top: 10px; }
+.search-container input {height: 40px;margin-top: 5px;width: 89%;background: none;padding-left: 8px;color: #fff;font-size: 16px;font-weight: bold;}
+
+
+.main{max-width: 900px;margin: 0 auto; position: relative;}
+.main .container { min-height: 500px;}
+.main .container ul{ width: 800px;margin: 30px auto;}
+.main .container ul li {display: block;margin: 20px 0 100px; position: relative; width: 100%;border-radius: 6px;box-shadow: 0 1px 3px rgba(249, 249, 249, 0.08), 0 0 0 1px rgba(26, 53, 71, .04), 0 1px 1px rgba(26, 53, 71, .06);}
+
+.container .section { background-size: contain;background-color: #fff;background-repeat: no-repeat;border-radius: 6px;}
+.container .section.right { background-position: right center;padding: 25px 24% 25px 2%;}
+.container .section.left { background-position: left center;padding: 25px 2% 25px 24%;}
+.container .section.left { background-position: left center;padding: 25px 2% 25px 24%;}
+.container .section.top { background-position: top center;background-size: 100%;}
+
+.container .section:after {content: '';position: absolute;width: 100%;height: 100%;top: 0;left: 0;}
+.container .section.right:after { background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #fff 20%)}
+.container .section.left:after { background: linear-gradient(to right, rgba(255, 255, 255, 0) 0% , #fff 20% )}
+.container .section.top:after { background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0% , #fff 50% ) }
+
+.section .content {position: relative;z-index: 2;height: 130px;color: rgba(2, 0, 0, 0.6);}
+.section.top .content{ height: 140px;padding: 0 30px;}
+.section .content .desc { padding: 10px 0;line-height: 1.75;font-size: 16px;}
+.section.top .review { height: 150px;padding:30px 0 0 180px;line-height: 40px; color: #fff;}
+.section.top .review img { width: 130px;height: 190px;z-index: 5;position: absolute;left: 30px;top: -20px;border-radius: 6px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);}
+
+/** 详情页 **/
+main-container { width: 100%;position: relative; }
+.main-left { width: 75%;padding: 30px 10px; float: left;}
+.main-left .article .author { padding: 10px 30px; text-align: right;}
+.main-left .article .author .num {padding-left: 20px;}
+.main-left .show-content {padding: 10px 0; }
+.main-right {float: left;  display: inline-block;width: 18%; padding-top: 30px; }
+.main-right .tag { width: 90%;height: 200px;border: 1px solid #bebbaa; }
+
+
+.footer {clear: both; height: 300px;width: 100%; background-image: url("../image/bj_cover.jpg"); background-position: bottom center;text-align: center; }
+.footer div{ padding-top: 120px;}
