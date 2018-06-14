@@ -42,3 +42,4 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 port: 4001
+baseurl: /blog/
