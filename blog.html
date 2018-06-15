@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客页面</title>
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/base.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/blog.css">
+</head>
+<body>
+<div class="header">
+    <div class="navbar">
+        <ul class="menu">
+            <li class="">
+                <a href="{{ '/index' }}">首页</a>
+            </li>
+            <li class="active">
+                <a href="{{ '/blog' }}">技术</a>
+            </li>
+            <!--<li>-->
+            <!--<a href="#">生活</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a href="">收藏</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="search-form">
+        <div class="search-container">
+            <form action="">
+                <img src="{{ site.url }}/assets/image/search.png" alt="">
+                <input type="text" name="keywords" placeholder="Search Keywords" autocomplete="off" />
+            </form>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="container">
+        <ul>
+
+            {% for post in paginator.posts %}
+
+            <li class="">
+                <a href="{{ post.url }}">
+                    <div class="section top" style="background-image: url('{{ site.url }}/assets/image/section1.jpg')">
+                        <div class="review">
+                            <div class="img">
+                                <img src="{{ site.url }}/assets/image/section1.jpg" alt="">
+                            </div>
+                            <h2>{{ post.title }}</h2>
+                            <p>发布时间：{{ post.date }}</p>
+
+                        </div>
+
+                        <div class="content">
+                            <p class="desc">{{ post.excerpt }}</p>
+                        </div>
+
+                    </div>
+                </a>
+
+            </li>
+
+
+            {% endfor %}
+
+
+
+            <!--{volist name="list" id="vo"}-->
+            <!--{eq name="mod" value="1"}-->
+            <!--<li class="">-->
+            <!--<a href="{:url('blog/detail', array('id' => 1))}">-->
+            <!--<div class="section top" style="background-image: url('{{ site.url }}/assets/image/section1.jpg')">-->
+            <!--<div class="review">-->
+            <!--<div class="img">-->
+            <!--<img src="{{ site.url }}/assets/image/section1.jpg" alt="">-->
+            <!--</div>-->
+            <!--<h2>{$vo['title']}</h2>-->
+            <!--<p>发布时间：{$vo['create_time']}</p>-->
+
+            <!--</div>-->
+
+            <!--<div class="content">-->
+            <!--<p class="desc">{$vo['description']}</p>-->
+            <!--</div>-->
+
+            <!--</div>-->
+            <!--</a>-->
+
+            <!--</li>-->
+            <!--{else/}-->
+            <!--<li>-->
+            <!--<a href="{:url('blog/detail', array('id' => $vo['id']))}">-->
+            <!--<div class="section right" style="background-image: url('{{ site.url }}/assets/image/section.jpg')">-->
+
+            <!--<div class="content">-->
+            <!--<h2>{$vo['title']}</h2>-->
+            <!--<p class="desc">{$vo['description']}</p>-->
+            <!--</div>-->
+
+            <!--</div>-->
+            <!--</a>-->
+
+            <!--</li>-->
+            <!--{/eq}-->
+
+            <!--{/volist}-->
+
+
+
+
+        </ul>
+
+
+    </div>
+
+
+    <!-- 分页链接 -->
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+        {% else %}
+        <span class="previous">Previous</span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+        {% else %}
+        <span class="next ">Next</span>
+        {% endif %}
+    </div>
+
+
+</div>
+
+<div class="footer">
+    <div class="white ">Copyright© 2018. Design by Lylan</div>
+</div>
+
+</body>
+</html>

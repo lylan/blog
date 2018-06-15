@@ -43,4 +43,4 @@ plugins:
 #   - vendor/ruby/
 port: 4001
 paginate: 2
-paginate_path: "blog/page:num"
+paginate_path: "/blog/p:num"
