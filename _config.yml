@@ -42,3 +42,5 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 port: 4001
+paginate: 2
+paginate_path: "blog/page:num"
